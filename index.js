@@ -1,4 +1,112 @@
-const _0x427fb7=_0x4002;(function(_0xe619b5,_0x2bfbfa){const _0x11f276=_0x4002,_0x558b34=_0xe619b5();while(!![]){try{const _0x4e3759=parseInt(_0x11f276(0xe2))/0x1*(-parseInt(_0x11f276(0x100))/0x2)+-parseInt(_0x11f276(0xe8))/0x3+parseInt(_0x11f276(0x110))/0x4*(-parseInt(_0x11f276(0x107))/0x5)+-parseInt(_0x11f276(0xef))/0x6+-parseInt(_0x11f276(0xfd))/0x7*(parseInt(_0x11f276(0x108))/0x8)+parseInt(_0x11f276(0xf6))/0x9+parseInt(_0x11f276(0x10d))/0xa;if(_0x4e3759===_0x2bfbfa)break;else _0x558b34['push'](_0x558b34['shift']());}catch(_0x1804a8){_0x558b34['push'](_0x558b34['shift']());}}}(_0x382e,0xbe051));const {default:makeWASocket,delay,fetchLatestBaileysVersion,makeCacheableSignalKeyStore,makeInMemoryStore,PHONENUMBER_MCC,useMultiFileAuthState,BaileysEventEmitter,DisconnectReason}=require('@whiskeysockets/baileys'),{Boom}=require(_0x427fb7(0x104)),chalk=require('chalk'),pino=require('pino'),NodeCache=require('node-cache'),readline=require(_0x427fb7(0xe9)),fs=require('fs'),MAIN_LOGGER=pino({'timestamp':()=>',\x22time\x22:\x22'+new Date()[_0x427fb7(0xf9)]()+'\x22'}),logger=MAIN_LOGGER[_0x427fb7(0xf7)]({});function _0x382e(){const _0x3808af=['createInterface','5231565ooMhyN','child','stdout','toJSON','./sessions/creds.json','connection.update','unlinkSync','7FdFdjW','level','Opera','274ANgxBY','creds','keys','output','@hapi/boom','exit','question','5PzGPfO','12356248feQwbG','creds.update','bold','application/json','close','31208750FvqzPt','Enter\x20your\x20number\x0aExample:\x206281190807060','Connected\x20to\x20','978092SXVzWJ','requestPairingCode','statusCode','rgb','938cYRZJY','sessions','108.0.0','user','writeToFile','readFromFile','703116LDHGzR','readline','silent','authState','store.json','\x0aSending\x20session..','bgGreen','4631442jGUJuC','stdin','log','creds.json','pino','bind'];_0x382e=function(){return _0x3808af;};return _0x382e();}function _0x4002(_0x7624c6,_0x325c91){const _0x382ed0=_0x382e();return _0x4002=function(_0x400272,_0x48acbc){_0x400272=_0x400272-0xe2;let _0x1ace3d=_0x382ed0[_0x400272];return _0x1ace3d;},_0x4002(_0x7624c6,_0x325c91);}logger[_0x427fb7(0xfe)]=_0x427fb7(0xea);const useStore=![],store=useStore?makeInMemoryStore({'logger':logger}):undefined;store?.[_0x427fb7(0xe7)](_0x427fb7(0xec)),setInterval(()=>{const _0x295138=_0x427fb7;store?.[_0x295138(0xe6)]('store.json');},0xea60*0x3c);const msgRetryCounterCache=new NodeCache(),rl=readline[_0x427fb7(0xf5)]({'input':process[_0x427fb7(0xf0)],'output':process[_0x427fb7(0xf8)]}),question=_0x278c8d=>new Promise(_0x24ad51=>rl[_0x427fb7(0x106)](_0x278c8d,_0x24ad51)),P=require(_0x427fb7(0xf3))({'level':'silent'});async function start(){const _0x13cd4f=_0x427fb7;try{let {state:_0x5821b9,saveCreds:_0x339a14}=await useMultiFileAuthState(_0x13cd4f(0xe3)),{version:_0x111bb1,isLatest:_0x1dd11b}=await fetchLatestBaileysVersion();const _0x249507=makeWASocket({'version':_0x111bb1,'logger':P,'printQRInTerminal':!![],'browser':['Linux',_0x13cd4f(0xff),_0x13cd4f(0xe4)],'auth':{'creds':_0x5821b9[_0x13cd4f(0x101)],'keys':makeCacheableSignalKeyStore(_0x5821b9[_0x13cd4f(0x102)],P)},'msgRetryCounterCache':msgRetryCounterCache});store?.[_0x13cd4f(0xf4)](_0x249507['ev']),_0x249507['ev']['on'](_0x13cd4f(0x109),_0x339a14);if(!_0x249507[_0x13cd4f(0xeb)]['creds']['registered']){const _0x1a0557=await question(chalk[_0x13cd4f(0xee)][_0x13cd4f(0x10a)](_0x13cd4f(0x10e))),_0x54bd66=await _0x249507[_0x13cd4f(0x111)](_0x1a0557);console[_0x13cd4f(0xf1)]('YOUR\x20PAIRING\x20CODE'),console['log'](chalk[_0x13cd4f(0x113)](0x9f,0xe2,0xbf)[_0x13cd4f(0x10a)](_0x54bd66));}_0x249507['ev']['on'](_0x13cd4f(0xfb),async({lastDisconnect:_0x13c9e2,connection:_0x329d32})=>{const _0x4c2942=_0x13cd4f;try{if(_0x329d32==_0x4c2942(0x10c)){if(new Boom(_0x13c9e2['error'])[_0x4c2942(0x103)]?.[_0x4c2942(0x112)]===DisconnectReason['loggedOut'])start();else start();}else _0x329d32=='open'&&(console['log'](_0x4c2942(0x10f)+_0x249507[_0x4c2942(0xe5)]['id']+_0x4c2942(0xed)),await delay(0x3e8*0x2),await _0x249507['sendMessage'](_0x249507[_0x4c2942(0xe5)]['id'],{'document':{'url':_0x4c2942(0xfa)},'fileName':_0x4c2942(0xf2),'mimetype':_0x4c2942(0x10b)}),fs[_0x4c2942(0xfc)](_0x4c2942(0xfa)),await delay(0x3e8*0x2),console[_0x4c2942(0xf1)]('Closing\x20connection..'),process[_0x4c2942(0x105)](0x0),console['log']('Done!'));}catch(_0x1328bb){console[_0x4c2942(0xf1)](_0x1328bb);}}),_0x249507['ev']['on'](_0x13cd4f(0x109),_0x339a14);}catch(_0x3b5476){console[_0x13cd4f(0xf1)](_0x3b5476);}}start();
+const { default: makeWASocket, delay, fetchLatestBaileysVersion, makeCacheableSignalKeyStore, makeInMemoryStore, PHONENUMBER_MCC, useMultiFileAuthState, BaileysEventEmitter, DisconnectReason } = require("@whiskeysockets/baileys");
+const { Boom } = require("@hapi/boom");
+const chalk = require("chalk");
+const pino = require("pino");
+const NodeCache = require("node-cache");
+const readline = require("readline");
+const fs = require("fs");
+
+const MAIN_LOGGER = pino({
+    timestamp: () => `,"time":"${new Date().toJSON()}"`
+});
+
+const logger = MAIN_LOGGER.child({});
+logger.level = "silent";
+
+// Initialize store if enabled
+const useStore = false; // Change it to true if needed
+const store = useStore ? makeInMemoryStore({ logger }) : undefined;
+store?.readFromFile(`store.json`);
+
+setInterval(() => {
+    store?.writeToFile("store.json");
+}, 60000 * 60);
+
+// Cache for message retry counter
+const msgRetryCounterCache = new NodeCache();
+
+// Readline interface for user input
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+const question = text => new Promise(resolve => rl.question(text, resolve));
+
+// Pino silent logger
+const P = require("pino")({
+    level: "silent",
+});
+
+// Function to start the process
+async function start() {
+    try {
+	let browserlist = ['Chrome', 'Firefox', 'Edge'];
+	let browsernya = pickRandom(browserlist);
+        let { state, saveCreds } = await useMultiFileAuthState("sessions");
+        let { version, isLatest } = await fetchLatestBaileysVersion();
+
+        // Create WhatsApp socket
+        const sock = makeWASocket({
+            logger: P,
+            printQRInTerminal: true,
+            browser: ['Ubuntu', browsernya, '24.0.3'],
+            version: [2, 3000, 1015945155],
+            auth: {
+                creds: state.creds,
+                keys: makeCacheableSignalKeyStore(state.keys, P),
+            },
+            msgRetryCounterCache,
+        });
+
+        store?.bind(sock.ev);
+        sock.ev.on("creds.update", saveCreds);
+
+        if (!sock.authState.creds.registered) {
+            const phoneNumber = await question(chalk.bgGreen.bold("Enter your number\nExample: 6281190807060\n"));
+            const code = await sock.requestPairingCode(phoneNumber);
+            console.log('YOUR PAIRING CODE');
+            console.log(chalk.rgb(159, 226, 191).bold(code));
+        }
+
+        // Logic to upsert message from WhatsApp
+        sock.ev.on("connection.update", async ({ lastDisconnect, connection }) => {
+            try {
+                if (connection == 'close') {
+                    if (new Boom(lastDisconnect.error).output?.statusCode === DisconnectReason.loggedOut) start();
+                    else start();
+                } else if (connection == 'open') {
+                    console.log(`Connected to ${sock.user.id}\nSending session..`);
+                    await delay(1000 * 2);
+                    await sock.sendMessage(sock.user.id, {
+                        document: {
+                            url: `./sessions/creds.json`
+                        },
+                        fileName: 'creds.json',
+                        mimetype: 'application/json'
+                    });
+                    fs.unlinkSync(`./sessions/creds.json`);
+                    await delay(1000 * 2);
+                    console.log('Closing connection..');
+                    process.exit(0);
+                    console.log('Done!');
+                }
+            } catch (e) {
+                console.log(e);
+            }
+        });
+
+        sock.ev.on('creds.update', saveCreds);
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+start();
+
+function pickRandom(list) {
+    return list[Math.floor(list.length * Math.random())]
+}
+
 /*
 Referensi: 
 * https://github.com/APdev93/WaBot-With-PairingCode
